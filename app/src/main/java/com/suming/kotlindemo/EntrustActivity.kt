@@ -10,6 +10,8 @@ import kotlin.reflect.KProperty
  * @类描述 ${TODO}委托
  */
 class EntrustActivity : AppCompatActivity() {
+
+    //测试github
     //委托模式是软件设计模式中的一项基本技巧。在委托模式中，有两个对象参与处理同一请求，接受请求的对象将请求委托给另一个对象来处理
     //kotlin支持委托模式，通过关键字by实现委托
 

@@ -1,6 +1,6 @@
 package com.suming.kotlindemo
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * @创建者 mingyan.su

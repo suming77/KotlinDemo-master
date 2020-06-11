@@ -1,6 +1,6 @@
 package com.suming.kotlindemo
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 

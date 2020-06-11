@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e7e7e7"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btn_let"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="let()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#F44336"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="with()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#E91E63"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="run()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#9C27B0"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="apply()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_also"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#673AB7"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="also()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_take_if"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#3F51B5"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="takeIf()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_take_unless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#2196F3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="takeUnless()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_syn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#4CAF50"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="综合使用"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FFEB3B"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="repeat()"
+        android:textAllCaps="false" />
+
+</LinearLayout>

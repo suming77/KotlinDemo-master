@@ -27,6 +27,16 @@
         android:paddingRight="10dp"
         android:text="KExampleActivity"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_base_grammar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#E91E63"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="变量，常量，注释"
+        android:textAllCaps="false" />
 
 
 </LinearLayout>

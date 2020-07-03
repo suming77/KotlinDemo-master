@@ -19,6 +19,7 @@
         <activity android:name=".DataTypeActivity"></activity>
         <activity android:name=".ExampleActivity"></activity>
         <activity android:name=".KExampleActivity"></activity>
+        <activity android:name=".blog.BaseGrammarActivity"></activity>
     </application>
 
 </manifest>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.suming.kotlindemo.MainActivity">
 
     <Button
@@ -27,6 +26,7 @@
         android:paddingRight="10dp"
         android:text="KExampleActivity"
         android:textAllCaps="false" />
+
     <Button
         android:id="@+id/btn_base_grammar"
         android:layout_width="wrap_content"
@@ -36,6 +36,17 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="变量，常量，注释"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_data_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#2196F3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="数据类型"
         android:textAllCaps="false" />
 
 

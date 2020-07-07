@@ -48,8 +48,8 @@ class BaseGrammarActivity : AppCompatActivity() {
     //3.延迟初始化
     //Kotlin 编译器不会对 `lateinit` 修饰的变量做空检查，它就会默认你会初始化的，至于你什么时候怎么初始化它就不管了。
 
-    //var nameA: Int//编译器报错，不能用于Int，Float，Double等数据类型
     //var nameB: String//编译器报错，必须初始化或者加abstract修饰
+    //lateinit var nameA: Int//编译器报错，lateinit不能用于Int，Float，Double等数据类型
     //lateinit val nameC: String//编译器报错，lateinit不能修饰val
     lateinit var nameD: String
 

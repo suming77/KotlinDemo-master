@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.suming.kotlindemo.blog.BaseGrammarActivity
+import com.suming.kotlindemo.blog.DataTypeActivity
 
 //kotlin的基础语法
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_example).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_kotlin_example).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_base_grammar).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_data_type).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -29,6 +31,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_base_grammar -> {//变量，常量，注释
                 startActivity(Intent(this, BaseGrammarActivity::class.java))
+            }
+            R.id.btn_data_type -> {//数据类型
+                startActivity(Intent(this, DataTypeActivity::class.java))
             }
 
         }

@@ -39,12 +39,12 @@ class DataTypeActivity : AppCompatActivity() {
         //Kotlin中没有基础数据类型，只有封装的数字类型，你没封装一个变量，kotlin帮你封装了一个对象，
         // 这样可以保证不出现空指针异常，数字类型也一样，比较大小时就有比较数值大小和对象地址比较
         //在kotlin中，三个等号===比较比较对象，两个等号==表示比较值大小
-        val a: Int = 1;
+        val a: Int? = 1
         print(a === a)//值大小相等，对象地址相等
 
         //经过装箱，封装了两个对象
-        val boxedA: Int = a;
-        val anotherBoxedA: Int = a;
+        val boxedA: Int? = a
+        val anotherBoxedA: Int? = a
 
         //虽然经过了装箱，但是值都是1
         print(boxedA == anotherBoxedA)//true,值相等

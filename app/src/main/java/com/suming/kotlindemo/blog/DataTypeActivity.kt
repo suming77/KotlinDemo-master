@@ -28,6 +28,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
+     * 10.数组类型
      * arrayOf():
      * 创建一个包含指定元素的数组。参数 T 是一个可变参数的泛型对象，每个元素的类型不一定相同，可以是不同类型。
      *
@@ -99,7 +100,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 字符串类型
+     * 9.字符串类型
      */
     private fun strOpera() {
         //String 表示字符串类型，和 Java 一样，String 是不可变的，所以字符串的元素可以通过索引操作的字符：str[index]，
@@ -136,8 +137,8 @@ class DataTypeActivity : AppCompatActivity() {
         // 例如左尖括号：trimMargin("<")，右尖括号：trimMargin(">")。
 
         //字符串模板
-        //字符串可以办好模板表达式，即一些小段代码，会求值并合并到字符串中，模板表达式由美元符号开头$，
-        // 在$符号后面加上变量名或者大括号中的表达式。其语法为$变量或常量名或者${表达式}。
+        //字符串可以包含模板表达式，即一些小段代码，会求值并合并到字符串中，模板表达式由美元符号开头$，
+        //在$符号后面加上变量名或者大括号中的表达式。其语法为$变量或常量名或者${表达式}。
 
         //原生字符和转义字符的内部都支持模板，如果你需要在原生字符串中表示字面值 $，可以写成{'$'}或者\$。
         // 注意：三个引号 """ """ 表示的字符串不支持反斜杠转义，即\$无效。
@@ -157,7 +158,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 字符型（Char）
+     * 8.字符型（Char）
      * Char 表示字符类型，与 Java 一样，Kotlin 中的 Char 不能直接和数字操作，字符变量使用单引号''表示，
      * 比如：'a'。不能直接视为数字，不过可以显式转换为数字。
      */
@@ -203,7 +204,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * Boolean 操作符
+     * 7.Boolean 操作符
      * Boolean 关键字表示布尔类型，并且有两个值：true、false。如果被需要可空引用，布尔会被装箱。
      *
      * Kotlin 的逻辑操作符与 Java 的相同：
@@ -236,7 +237,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 位操作符
+     * 6.位操作符
      * Kotlin 中的位操作符与 Java 有很大差别，Kotlin 中没有特殊的字符，但是只能命名为可以以中缀形式调用的函数
      * 注意：仅仅适用于 Int 和 Long 类型
      */
@@ -255,7 +256,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 类型转换
+     * 5.类型转换
      *
      * 由于不同的表示方式，较小类型并不是较大类型的子类型，较小的类型不能隐式转换为较大的类型，
      * 这意味着在不进行显式转换的情况下我们不能把一个 `Byte` 型值赋给 `Int` 变量。
@@ -287,7 +288,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 数字加下划线用法
+     * 4.数字加下划线用法
      * 三个等号 === 表示比较对象地址，两个 == 表示比较两个值大小。
      *
      * 注意：在 Kotlin 的缓存策略中，缓存的范围是-127~128，在范围 [-128, 127] 之间并不会创建新的对象，
@@ -335,7 +336,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 数字加下划线用法
+     * 3.数字加下划线用法
      */
     private fun underlineUsage() {
         val fiveMillion = 5_000_000                         //五百万
@@ -352,7 +353,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 进制用法
+     * 2.进制用法
      */
     private fun hexUsage() {
         //Kotlin不支持八进制
@@ -364,7 +365,7 @@ class DataTypeActivity : AppCompatActivity() {
     }
 
     /**
-     * 普通用法
+     * 1.普通用法
      */
     private fun normalUsage() {
         var numI: Int = 10

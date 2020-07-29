@@ -5,10 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.suming.kotlindemo.blog.BaseGrammarActivity
+import com.suming.kotlindemo.blog.*
 import com.suming.kotlindemo.blog.DataTypeActivity
-import com.suming.kotlindemo.blog.EmptyJudgmentActivity
-import com.suming.kotlindemo.blog.LogicControlGrammarActivity
 
 //kotlin的基础语法
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -23,6 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_data_type).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_logic_control).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_empty_judgment).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_function).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -44,6 +43,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_empty_judgment -> {//空类型相关
                 startActivity(Intent(this, EmptyJudgmentActivity::class.java))
+            }
+            R.id.btn_function -> {//函数的使用
+                startActivity(Intent(this, FunctionActivity::class.java))
             }
 
         }

@@ -23,6 +23,7 @@
         <activity android:name=".blog.DataTypeActivity"></activity>
         <activity android:name=".blog.LogicControlGrammarActivity"></activity>
         <activity android:name=".blog.EmptyJudgmentActivity"></activity>
+        <activity android:name=".blog.FunctionActivity"></activity>
     </application>
 
 </manifest>

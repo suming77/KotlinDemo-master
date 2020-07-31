@@ -79,18 +79,18 @@
         android:background="#3F51B5"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="函数的使用"
+        android:text="函数的声明和使用"
         android:textAllCaps="false" />
 
     <Button
+        android:id="@+id/btn_class"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#2196F3"
-        android:visibility="gone"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="逻辑控制语句"
+        android:text="类的声明和使用"
         android:textAllCaps="false" />
 
 

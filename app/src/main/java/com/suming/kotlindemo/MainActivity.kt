@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_logic_control).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_empty_judgment).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_function).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_class).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -41,11 +42,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_logic_control -> {//逻辑控制语句
                 startActivity(Intent(this, LogicControlGrammarActivity::class.java))
             }
-            R.id.btn_empty_judgment -> {//空类型相关
+            R.id.btn_empty_judgment -> {//空类型相关 ?、?.、?:、!!、as?
                 startActivity(Intent(this, EmptyJudgmentActivity::class.java))
             }
-            R.id.btn_function -> {//函数的使用
+            R.id.btn_function -> {//函数的声明和使用
                 startActivity(Intent(this, FunctionActivity::class.java))
+            }
+            R.id.btn_class -> {//类的声明和使用
+                startActivity(Intent(this, ClassActivity::class.java))
             }
 
         }

@@ -24,6 +24,7 @@
         <activity android:name=".blog.LogicControlGrammarActivity"></activity>
         <activity android:name=".blog.EmptyJudgmentActivity"></activity>
         <activity android:name=".blog.FunctionActivity"></activity>
+        <activity android:name=".blog.ClassActivity"></activity>
     </application>
 
 </manifest>

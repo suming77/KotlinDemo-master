@@ -25,6 +25,7 @@
         <activity android:name=".blog.EmptyJudgmentActivity"></activity>
         <activity android:name=".blog.FunctionActivity"></activity>
         <activity android:name=".blog.ClassActivity"></activity>
+        <activity android:name=".blog.GetSetActivity"></activity>
     </application>
 
 </manifest>

@@ -20,6 +20,9 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ExampleActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "JAVA";
 
+    private static final String mark = "HelloWord";
+    private static final String mark2 = String.valueOf("HelloWord");
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

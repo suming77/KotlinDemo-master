@@ -77,7 +77,7 @@ class BaseGrammarActivity : AppCompatActivity() {
 
         tvName = TextView(this)
         tvName.text = "延迟初始化"
-
+        method()
         baseUsage()
 
         Log.e(TAG, "惰性初始化：mLists地址是否相同 == ${mLists == mLists}, 内容 == $mLists")
@@ -87,6 +87,17 @@ class BaseGrammarActivity : AppCompatActivity() {
         Log.e(TAG, "常量：constA == $constA")
         Log.e(TAG, "常量：constB == ${Constants.constB}")
         Log.e(TAG, "常量：constC == $constC")
+
+    }
+
+    lateinit var person: Person //lateinit 表示延迟初始化，必须是非空
+
+    fun method() {
+        person = Person()
+        if (this::person.isInitialized) {//如果已经赋值返回true，否则返回false
+            //TODO
+        }
+        Log.e(TAG, "延迟初始化: person.isInitialized == ${::person.isInitialized}")
     }
 
     /**

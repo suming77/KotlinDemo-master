@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_empty_judgment).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_function).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_class).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_get_set).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -50,6 +51,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_class -> {//类的声明和使用
                 startActivity(Intent(this, ClassActivity::class.java))
+            }
+            R.id.btn_get_set -> {//get()和set()
+                startActivity(Intent(this, GetSetActivity::class.java))
             }
 
         }

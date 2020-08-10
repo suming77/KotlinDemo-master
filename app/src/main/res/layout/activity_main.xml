@@ -93,17 +93,15 @@
         android:text="类的声明和使用"
         android:textAllCaps="false" />
 
-
     <Button
-        android:id="@+id/btn_syn"
+        android:id="@+id/btn_get_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:background="#4CAF50"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="综合使用"
+        android:text="get()和set()"
         android:textAllCaps="false" />
 
     <Button

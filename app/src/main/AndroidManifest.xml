@@ -17,14 +17,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".DataTypeActivity"></activity>
-        <activity android:name=".ExampleActivity"></activity>
-        <activity android:name=".KExampleActivity"></activity>
+        <activity android:name=".blog.ExampleActivity"></activity>
+        <activity android:name=".blog.KExampleActivity"></activity>
         <activity android:name=".blog.BaseGrammarActivity"></activity>
         <activity android:name=".blog.DataTypeActivity"></activity>
         <activity android:name=".blog.LogicControlGrammarActivity"></activity>
         <activity android:name=".blog.EmptyJudgmentActivity"></activity>
         <activity android:name=".blog.FunctionActivity"></activity>
-        <activity android:name=".blog.ClassActivity"></activity>
+        <activity android:name=".blog.ClassInheritanceActivity"></activity>
         <activity android:name=".blog.GetSetActivity"></activity>
     </application>
 

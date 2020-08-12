@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
  * @创建者 mingyan.su
  * @创建时间 2020/08/04 11:46
  * @类描述 {$TODO}get()和Set()
+ *  在 Person和ConstCompare 中
  */
-
 class GetSetActivity : AppCompatActivity() {
     private val TAG = "GetSetActivity"
 

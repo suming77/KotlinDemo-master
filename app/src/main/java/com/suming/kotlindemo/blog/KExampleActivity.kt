@@ -1,4 +1,4 @@
-package com.suming.kotlindemo
+package com.suming.kotlindemo.blog
 
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.suming.kotlindemo.R
+import com.suming.kotlindemo.User
 
 /**
  * @创建者 mingyan.su

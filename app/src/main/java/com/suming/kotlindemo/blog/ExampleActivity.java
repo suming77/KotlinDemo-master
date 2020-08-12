@@ -1,10 +1,13 @@
-package com.suming.kotlindemo;
+package com.suming.kotlindemo.blog;
 
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.suming.kotlindemo.R;
+import com.suming.kotlindemo.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @类描述 {$TODO}原生例子
  */
 public class ExampleActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "JAVA";
+    public static final String TAG = "JAVA";
 
     private static final String mark = "HelloWord";
     private static final String mark2 = String.valueOf("HelloWord");

@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_logic_control).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_empty_judgment).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_function).setOnClickListener(this)
-        findViewById<TextView>(R.id.btn_class).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_class_inheritance).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_get_set).setOnClickListener(this)
     }
 
@@ -49,10 +49,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_function -> {//函数的声明和使用
                 startActivity(Intent(this, FunctionActivity::class.java))
             }
-            R.id.btn_class -> {//类的声明和使用
-                startActivity(Intent(this, ClassActivity::class.java))
+            R.id.btn_class_inheritance -> {//类和继承
+                startActivity(Intent(this, ClassInheritanceActivity::class.java))
             }
-            R.id.btn_get_set -> {//get()和set()
+            R.id.btn_get_set -> {//属性与字段：get()和set()
                 startActivity(Intent(this, GetSetActivity::class.java))
             }
 

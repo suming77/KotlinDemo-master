@@ -32,6 +32,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_example);
         TextView tv_title = findViewById(R.id.tv_title);
         tv_title.setText("ExampleActivity");
+
         findViewById(R.id.btn_let).setOnClickListener(this);
         findViewById(R.id.btn_with).setOnClickListener(this);
         findViewById(R.id.btn_run).setOnClickListener(this);

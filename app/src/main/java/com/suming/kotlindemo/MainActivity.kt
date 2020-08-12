@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_function).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_class_inheritance).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_get_set).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_imports_packages).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -53,6 +54,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, ClassInheritanceActivity::class.java))
             }
             R.id.btn_get_set -> {//属性与字段：get()和set()
+                startActivity(Intent(this, GetSetActivity::class.java))
+            }
+            R.id.btn_imports_packages -> {//导包
                 startActivity(Intent(this, GetSetActivity::class.java))
             }
 

@@ -6,14 +6,13 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-
 /**
  * @创建者 mingyan.su
  * @创建时间 2020/07/30 17:06
  * @类描述 {$TODO}类和继承
  */
 class ClassInheritanceActivity : AppCompatActivity() {
-    val TAG = "ClassInheritanceActivity"
+    val TAG = "ClassActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var person = Person("Android")
@@ -37,6 +36,7 @@ class ClassInheritanceActivity : AppCompatActivity() {
 
         var mixedBlood = MixedBlood()
         mixedBlood.describe()
+
     }
 
 
@@ -66,7 +66,7 @@ class ClassInheritanceActivity : AppCompatActivity() {
         val num = 0
 
         fun refresh() {
-            Log.e("ClassInheritanceActivity", "成员函数")
+            Log.e("ClassActivity", "成员函数")
         }
     }
 
@@ -185,12 +185,12 @@ class ClassInheritanceActivity : AppCompatActivity() {
      */
     class Chicken(var name: String = "Kotlin") {
         init {//初始化代码块
-            Log.e("ClassInheritanceActivity", "构造函数有默认值: name == $name")
+            Log.e("ClassActivity", "构造函数有默认值: name == $name")
         }
 
         //辅助构造函数
         constructor(name: String = "Java", age: Int = 10) : this(name) {
-            Log.e("ClassInheritanceActivity", "构造函数有默认值: name == $name  | age == $age")
+            Log.e("ClassActivity", "构造函数有默认值: name == $name  | age == $age")
         }
     }
 
@@ -207,6 +207,7 @@ class ClassInheritanceActivity : AppCompatActivity() {
     }
 
     /**
+     * Kotlin 中不在有extends、implements关键字，取而代之的是冒号:表示
      * 要声明一个显式超类型，可以将类型放在类头的冒号后面：
      * 如果派生类有主构造函数，则必须在那里使用主构造函数的参数初始化基类。
      */
@@ -231,12 +232,12 @@ class ClassInheritanceActivity : AppCompatActivity() {
     //基类
     open class Animal(name: String) {
         constructor(name: String, sex: String) : this(name) {
-            Log.e("ClassInheritanceActivity", "基类辅助构造函数: name == $name | sex == $sex")
+            Log.e("ClassActivity", "基类辅助构造函数: name == $name | sex == $sex")
         }
 
         //open 关键字修饰才可以被子类重写
         open fun describe() {
-            Log.e("ClassInheritanceActivity", "父类方法：金色花边老虎")
+            Log.e("ClassActivity", "父类方法：金色花边老虎")
         }
 
         //没有 open 关键字修饰
@@ -260,7 +261,7 @@ class ClassInheritanceActivity : AppCompatActivity() {
     //子类
     class Tiger : Animal {
         constructor(name: String, sex: String, age: Int) : super(name, sex) {
-            Log.e("ClassInheritanceActivity", "子类辅助构造函数: name == $name | sex == $sex | age == $age")
+            Log.e("ClassActivity", "子类辅助构造函数: name == $name | sex == $sex | age == $age")
         }
 
 //        final override fun describe() {//重写的方法被override标记，默认是 open 修饰的，如果要禁止这个函数被子类重写，使用 final 修饰
@@ -268,7 +269,7 @@ class ClassInheritanceActivity : AppCompatActivity() {
 
         override fun describe() {//重写父类中的方法，override修饰
             super.describe()//super关键字调用基类的函数
-            Log.e("ClassInheritanceActivity", "子类方法重写：它是纸老虎")
+            Log.e("ClassActivity", "子类方法重写：它是纸老虎")
         }
 
         //override fun preyOn() {//报错，基类中preyOn()函数没有声明`open`，无论是否有`override`修饰都是非法的
@@ -286,7 +287,7 @@ class ClassInheritanceActivity : AppCompatActivity() {
             fun appearance() {
                 super@Tiger.describe() //调用基类Animal中的describe()的实现
                 super@Tiger.type
-                Log.e("ClassInheritanceActivity", "内部类访问外部类的超类：type == ${super@Tiger.type}")
+                Log.e("ClassActivity", "内部类访问外部类的超类：type == ${super@Tiger.type}")
             }
         }
     }

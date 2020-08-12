@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.suming.kotlindemo.R
 import com.suming.kotlindemo.User
-
 /**
  * @创建者 mingyan.su
  * @创建时间 2020/06/08 18:28
@@ -19,7 +18,6 @@ class KExampleActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_example)
-
         val tv_title = findViewById<TextView>(R.id.tv_title)
         tv_title.setText("KExampleActivity")
         findViewById<TextView>(R.id.btn_let).setOnClickListener(this)

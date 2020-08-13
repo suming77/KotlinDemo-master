@@ -115,5 +115,16 @@
         android:text="导包"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_interfaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FFC107"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="接口的使用"
+        android:textAllCaps="false" />
+
 
 </LinearLayout>

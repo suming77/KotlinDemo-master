@@ -27,6 +27,7 @@
         <activity android:name=".blog.ClassInheritanceActivity"></activity>
         <activity android:name=".blog.GetSetActivity"></activity>
         <activity android:name=".blog.ImportsPackagesActivity"></activity>
+        <activity android:name=".blog.InterfacesActivity"></activity>
     </application>
 
 </manifest>

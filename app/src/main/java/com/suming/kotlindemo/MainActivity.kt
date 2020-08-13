@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_class_inheritance).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_get_set).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_imports_packages).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_interfaces).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -58,6 +59,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_imports_packages -> {//导包
                 startActivity(Intent(this, GetSetActivity::class.java))
+            }
+            R.id.btn_interfaces -> {//接口
+                startActivity(Intent(this, InterfacesActivity::class.java))
             }
 
         }

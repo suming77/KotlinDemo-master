@@ -28,6 +28,7 @@
         <activity android:name=".blog.GetSetActivity"></activity>
         <activity android:name=".blog.ImportsPackagesActivity"></activity>
         <activity android:name=".blog.InterfacesActivity"></activity>
+        <activity android:name=".blog.ModifierActivity"></activity>
     </application>
 
 </manifest>

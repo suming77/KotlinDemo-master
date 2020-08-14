@@ -126,5 +126,16 @@
         android:text="接口的使用"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_visibility_modifiers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FF5722"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="可见性修饰符"
+        android:textAllCaps="false" />
+
 
 </LinearLayout>

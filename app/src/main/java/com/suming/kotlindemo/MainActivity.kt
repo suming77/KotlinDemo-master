@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_imports_packages).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_interfaces).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_visibility_modifiers).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_extensions).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -66,6 +67,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_visibility_modifiers -> {//可见性修饰符
                 startActivity(Intent(this, ModifierActivity::class.java))
+            }
+            R.id.btn_extensions -> {//拓展
+                startActivity(Intent(this, ExtensionsActivity::class.java))
             }
 
         }

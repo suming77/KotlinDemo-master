@@ -1,141 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.suming.kotlindemo.MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_example"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="ExampleActivity"
-        android:textAllCaps="false" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_kotlin_example"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#F44336"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="KExampleActivity"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_example"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ExampleActivity"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_base_grammar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#E91E63"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="变量，常量，注释"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_kotlin_example"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#F44336"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="KExampleActivity"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_data_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#FFC107"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="数据类型"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_base_grammar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#E91E63"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="变量，常量，注释"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_logic_control"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#9C27B0"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="逻辑控制语句"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_data_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFC107"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="数据类型"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_empty_judgment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#673AB7"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="空类型相关"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_logic_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#9C27B0"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="逻辑控制语句"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_function"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#3F51B5"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="函数的声明和使用"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_empty_judgment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#673AB7"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="空类型相关"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_class_inheritance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#2196F3"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="类和继承"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_function"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#3F51B5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="函数的声明和使用"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_get_set"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#4CAF50"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="get()和set()"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_class_inheritance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#2196F3"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="类和继承"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_imports_packages"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#FFEB3B"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="导包"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_get_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#4CAF50"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="get()和set()"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_interfaces"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#FFC107"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="接口的使用"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_imports_packages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFEB3B"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="导包"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_visibility_modifiers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#FF5722"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="可见性修饰符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_interfaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFC107"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="接口的使用"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_visibility_modifiers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FF5722"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="可见性修饰符"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_extensions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#F44336"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="拓展"
+            android:textAllCaps="false" />
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

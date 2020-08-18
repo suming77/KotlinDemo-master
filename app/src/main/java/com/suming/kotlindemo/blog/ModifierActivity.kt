@@ -96,7 +96,6 @@ class ModifierActivity : AppCompatActivity() {
 
             //Outer.Inner //报错,不可见
             //Inner::numE //报错,不可见
-
         }
     }
 

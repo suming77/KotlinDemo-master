@@ -30,6 +30,7 @@
         <activity android:name=".blog.InterfacesActivity"></activity>
         <activity android:name=".blog.ModifierActivity"></activity>
         <activity android:name=".blog.ExtensionsActivity"></activity>
+        <activity android:name=".blog.DataClassActivity"></activity>
     </application>
 
 </manifest>

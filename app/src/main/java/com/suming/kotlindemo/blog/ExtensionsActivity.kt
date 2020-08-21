@@ -21,8 +21,8 @@ fun User.topLevelType() {
  * @创建者 mingyan.su
  * @创建时间 2020/08/14 18:13
  * @类描述 {$TODO}Kotlin 扩展 Extensions
- * Kotlin 提供了扩展具有新功能的类的能力，而不必从类继承或使用设计模式（如Decorator），这是通过称为扩展的特殊声明来实现的。
  *
+ * Kotlin 提供了扩展具有新功能的类的能力，而不必从类继承或使用设计模式（如Decorator），这是通过称为扩展的特殊声明来实现的。
  * 简单点来说，当你想在某个类加新功能时，为了避免在原来的类做修改，可以在别的类中为该类设计新代码。
  * 扩展是一种静态行为，对被扩展的类代码本身不会造成任何影响。
  */
@@ -63,10 +63,14 @@ class ExtensionsActivity : AppCompatActivity() {
         //Host().printInvite() //错误，扩展函数在 Minor() 不可用
 
         Person2().printShare(Base())
+        Person2().printShare(Child())
         Student2().printShare(Base())//分发接受者虚拟解析
         Student2().printShare(Child())//扩展接收者虚拟解析
 
         user.topLevelType()
+
+        var tiger = Tiger()
+        printWay(tiger)
     }
 
     /**
@@ -161,16 +165,17 @@ class ExtensionsActivity : AppCompatActivity() {
      * 如果一个类定义了一个伴生对象，你也可以为这个伴生对象定义扩展函数和属性，伴生对象通过类名.的形式调用伴生对象，
      * 伴生对象声明的扩展函数通过类名限定符来调用
      */
-
     class Dragon {
         companion object {//伴生对象
             //TODO
         }
     }
+
     //伴生对象的扩展函数
     fun Dragon.Companion.printCompanion() {
         println("伴生对象的扩展：扩展函数")
     }
+
     //伴生对象的扩展属性
     val Dragon.Companion.type: Int
         get() = 0
@@ -249,4 +254,24 @@ class ExtensionsActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * 10.派发机制
+     * 面向对象的语言一般有两种派发机制，静态派发和动态派发，静态派发比如方法重载，在编译时就确定调用那个方法；
+     * 而动态派发更多体现在多肽上，调用的方法在运行时才能确认。
+     */
+    open class Animal {
+        open fun movingWay() {
+            println("Animal:way")
+        }
+    }
+
+    class Tiger : Animal() {
+        override fun movingWay() {
+            println("Tiger:way")
+        }
+    }
+
+    fun printWay(animal: Animal) {
+        animal.movingWay()
+    }
 }

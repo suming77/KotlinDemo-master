@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * @创建者 mingyan.su
  * @创建时间 2020/08/12 19:06
- * @类描述 {$TODO}接口的使用
+ * @类描述 {$TODO}接口和函数接口
  */
 class InterfacesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +22,8 @@ class InterfacesActivity : AppCompatActivity() {
 
         val c = C()
         c.bar()
+
+//        println("8 是否能被 2 整除：${isEvent.check(8)}")
     }
 
     /**
@@ -146,6 +148,7 @@ class InterfacesActivity : AppCompatActivity() {
             super<B>.foo() //调用B中的foo()
         }
     }
+
     /**
      * 接口A，B都声明了函数 foo() 和 bar()，它们都默认实现了 foo() ，但是只有接口B中的 bar() 提供了默认实现，
      * 接口A中的 bar() 没有提供默认实现，默认为抽象。如果我们在接口A派生一个具体实现类C，
@@ -158,4 +161,29 @@ class InterfacesActivity : AppCompatActivity() {
      * 无法确认调用的是A中的 foo() 实现还是B中的 foo() 实现，所以Kotlin强制子类重写 foo()。
      * 因为A中的 bar() 没有提供默认实现，也需要强制重写。
      */
+
+    /**
+     * 6.函数接口
+     * 在 Kotlin1.4版本开始，只有一个抽象方法的接口称为函数接口或者称为单个抽象方法（SAM）接口。
+     * 函数接口可以有几个非抽象成员，但是只能由一个抽象成员。
+     * SAM 转换，即 Single Abstract Method Conversions，就是对于只有单个非默认抽象方法接口的转换
+     * 通过SAM转换，Kotlin 可以将其签名与接口的单一方法的签名相匹配的任何 Lambda 表达式转换为实现该接口的类的实例。
+     */
+//    //函数接口使用fun关键字修饰接口
+//    fun interface KRunnable {
+//        fun invoke()
+//    }
+//
+//    fun interface IntAction {
+//        fun check(int: Int): Boolean
+//    }
+//
+//    var isEvent = object : IntAction {
+//        override fun check(int: Int): Boolean {
+//            return int % 2 == 0
+//        }
+//    }
+
+    //    var isEvent2 = IntAction { int -> int % 2 == 0 }
+//    var isEvent2 = IntAction { it % 2 == 0 }
 }

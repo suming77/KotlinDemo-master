@@ -50,8 +50,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
                 //TODO
             }
         });
-
-
     }
 
 

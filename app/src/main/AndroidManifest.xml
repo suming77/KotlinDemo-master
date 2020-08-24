@@ -31,6 +31,7 @@
         <activity android:name=".blog.ModifierActivity"></activity>
         <activity android:name=".blog.ExtensionsActivity"></activity>
         <activity android:name=".blog.DataClassActivity"></activity>
+        <activity android:name=".blog.SealedClassActivity"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.suming.kotlindemo.normal
 
 import com.suming.kotlindemo.User
+import com.suming.kotlindemo.blog.SealedClassActivity
 
 /**
  * @创建者 mingyan.su
@@ -10,6 +11,11 @@ import com.suming.kotlindemo.User
 
 fun User.share() {
     //TODO
+}
+
+//子类的类的拓展
+fun SealedClassActivity.BaseSealed.Student.share(name: String): String {
+    return name
 }
 
 class ScopeExtensions {

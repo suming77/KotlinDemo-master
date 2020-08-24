@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_visibility_modifiers).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_extensions).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_data_class).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_sealed_class).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -74,6 +75,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_data_class -> {//数据类
                 startActivity(Intent(this, DataClassActivity::class.java))
+            }
+            R.id.btn_sealed_class -> {//密封类
+                startActivity(Intent(this, SealedClassActivity::class.java))
             }
 
         }

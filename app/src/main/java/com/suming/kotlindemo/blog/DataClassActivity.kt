@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
  *
  * 我们经常创建主要用于保存接口返回的Json数据的类。
  * 在这样的类中，只包含了一些需要的数据，以及处理这些数据编写的方法。
- * 在 Kotiln 中，这被称为一个数据类，并使用 data 修饰。
+ * 在 Kotlin 中，这被称为一个数据类，并使用 data 修饰。
  */
 class DataClassActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,7 +93,6 @@ class DataClassActivity : AppCompatActivity() {
     val triple = Triple("一", "二", "三")
 
     class Student(val name: String, val age: Int)//普通类
-
 
     /**
      * 2.注意事项

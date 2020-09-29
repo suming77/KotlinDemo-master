@@ -10,7 +10,9 @@ import com.suming.kotlindemo.R;
 import com.suming.kotlindemo.User;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class ExampleActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = "JAVA";
+
 
     private static final String mark = "HelloWord";
     private static final String mark2 = String.valueOf("HelloWord");
@@ -51,7 +54,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
     }
-
 
     @Override
     public void onClick(View view) {
@@ -86,6 +88,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
                 break;
         }
     }
+
 
     private void synForJava(String str) {
         if (!TextUtils.isEmpty(str)) {
@@ -146,5 +149,82 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
         Log.e(TAG, "let == length：" + str.length());
         int result = 1818;
         Log.e(TAG, "let == result：" + result);
+    }
+
+    //==========================================Java泛型问题=====================================
+
+    private void test(){
+        Map map = new HashMap();
+        map.put("key", 10);
+        Integer i = (Integer) map.get("key"); //正确，返回的就是Integer类型
+        String str = (String) map.get("key"); //错误，运行时会报异常，map存放的值实际是Integer类型，不是String类型
+
+        Map<String, Integer> strMap = new HashMap<>();
+        strMap.put("key", 10);
+        Integer i2 = strMap.get("key"); //正确，不用考虑类型转换
+        //String str2 = strMap.get("key"); //错误，编译不通过，strMap的值只能是Integer类型，其他类型会报错
+
+        List<String> strings = new ArrayList<>();
+//        List<Object> objects = strings;//这里编译错误避免了下面的出现的运行异常
+//        objects.add(10);//将一个字符串放入字符串列表中
+//        String string = (String) objects.get(0);//不能整数转换为字符串
+
+//        List<Object> objects = new ArrayList<>();
+//        objects.addAll(strings);
+//        Object o = objects.get(0);
+//
+//        MyList<String> stringMyList = new MyList<>();
+//        MyList<Object> objectMyList = new MyList<>();
+        //objectMyList.addAll(stringMyList); //编译错误
+
+        Number num = new Integer(10);
+        ArrayList<? extends Number> list = new ArrayList<Integer>();// compile error
+        ArrayList<? super Number> list2 = new ArrayList<Object>();
+        Number[] numbers = new Integer[0];
+    }
+
+    public class Dragon<T> {//创建类的时候，通过<T>为其指定了类型参数T
+
+        public void share(T t) {
+            //TODO
+        }
+    }
+
+    public class Tiger {
+        public <T> void invite(T t) {//方法泛型化，声明方法的时候，为其指定了类型参数T
+            //TODO
+        }
+    }
+
+//    //定义一个泛型接口
+//    interface IList<T> {
+//        void addAll(IList<T> list);//定义addAll()方法，用于添加集合
+//    }
+//
+//    //MyList提供IList的默认实现
+//    class MyList<T> implements IList<T> {
+//        @Override
+//        public void addAll(IList<T> list) {
+//
+//        }
+//    }
+
+
+//    interface MyList<T> {
+//        T shareT();
+//    }
+//
+//    void invite(MyList<String> strs) {
+//        //MyList<Object> objects = strs;//报错，在Java中是不允许的
+//        MyList<? extends Object> objects = strs;//java通配符写法
+//    }
+
+    interface MyList<T> {
+        T shareT();
+    }
+
+    void invite(MyList<Number> strs) {
+        //MyList<Object> objects = strs;//报错，在Java中是不允许的
+        MyList<? super Double> objects = strs;//java通配符写法
     }
 }

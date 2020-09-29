@@ -32,6 +32,8 @@
         <activity android:name=".blog.ExtensionsActivity"></activity>
         <activity android:name=".blog.DataClassActivity"></activity>
         <activity android:name=".blog.SealedClassActivity"></activity>
+        <activity android:name=".blog.GenericsActivity"></activity>
+        <activity android:name=".blog.NestInnerActivity"></activity>
     </application>
 
 </manifest>

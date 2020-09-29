@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_extensions).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_data_class).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_sealed_class).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_generics).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_nest_inner_class).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -78,6 +80,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_sealed_class -> {//密封类
                 startActivity(Intent(this, SealedClassActivity::class.java))
+            }
+            R.id.btn_generics -> {//泛型
+                startActivity(Intent(this, GenericsActivity::class.java))
+            }
+            R.id.btn_nest_inner_class -> {//嵌套类和内部类
+                startActivity(Intent(this, NestInnerActivity::class.java))
             }
 
         }

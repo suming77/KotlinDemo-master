@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.suming.kotlindemo.blog.*
 import com.suming.kotlindemo.blog.DataTypeActivity
+import com.suming.kotlindemo.blog.EnumActivity
 
 //kotlin的基础语法
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_sealed_class).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_generics).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_nest_inner_class).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_enum).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -86,6 +88,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_nest_inner_class -> {//嵌套类和内部类
                 startActivity(Intent(this, NestInnerActivity::class.java))
+            }
+            R.id.btn_enum -> {//枚举类
+                startActivity(Intent(this, EnumActivity::class.java))
             }
 
         }

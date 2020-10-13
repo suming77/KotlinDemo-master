@@ -16,24 +16,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DataTypeActivity"></activity>
-        <activity android:name=".blog.ExampleActivity"></activity>
-        <activity android:name=".blog.KExampleActivity"></activity>
-        <activity android:name=".blog.BaseGrammarActivity"></activity>
-        <activity android:name=".blog.DataTypeActivity"></activity>
-        <activity android:name=".blog.LogicControlGrammarActivity"></activity>
-        <activity android:name=".blog.EmptyJudgmentActivity"></activity>
-        <activity android:name=".blog.FunctionActivity"></activity>
-        <activity android:name=".blog.ClassInheritanceActivity"></activity>
-        <activity android:name=".blog.GetSetActivity"></activity>
-        <activity android:name=".blog.ImportsPackagesActivity"></activity>
-        <activity android:name=".blog.InterfacesActivity"></activity>
-        <activity android:name=".blog.ModifierActivity"></activity>
-        <activity android:name=".blog.ExtensionsActivity"></activity>
-        <activity android:name=".blog.DataClassActivity"></activity>
-        <activity android:name=".blog.SealedClassActivity"></activity>
-        <activity android:name=".blog.GenericsActivity"></activity>
-        <activity android:name=".blog.NestInnerActivity"></activity>
+        <activity android:name=".DataTypeActivity"/>
+        <activity android:name=".blog.ExampleActivity"/>
+        <activity android:name=".blog.KExampleActivity"/>
+        <activity android:name=".blog.BaseGrammarActivity"/>
+        <activity android:name=".blog.DataTypeActivity"/>
+        <activity android:name=".blog.LogicControlGrammarActivity"/>
+        <activity android:name=".blog.EmptyJudgmentActivity"/>
+        <activity android:name=".blog.FunctionActivity"/>
+        <activity android:name=".blog.ClassInheritanceActivity"/>
+        <activity android:name=".blog.GetSetActivity"/>
+        <activity android:name=".blog.ImportsPackagesActivity"/>
+        <activity android:name=".blog.InterfacesActivity"/>
+        <activity android:name=".blog.ModifierActivity"/>
+        <activity android:name=".blog.ExtensionsActivity"/>
+        <activity android:name=".blog.DataClassActivity"/>
+        <activity android:name=".blog.SealedClassActivity"/>
+        <activity android:name=".blog.GenericsActivity"/>
+        <activity android:name=".blog.NestInnerActivity"/>
+        <activity android:name=".blog.EnumActivity"/>
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@ import android.widget.TextView//导入android.widget包下的TextView类
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*//java.util包下的所有类可用
 import kotlin.collections.ArrayList//ArrayList是java.util包下的的子包
-import com.suming.kotlindemo.blog.TextView as MyView//MyView 表示com.suming.kotlindemo.blog.TextView
+import com.suming.kotlindemo.blog.TextView1 as MyView//MyView 表示com.suming.kotlindemo.blog.TextView
 
 /**
  * @创建者 mingyan.su

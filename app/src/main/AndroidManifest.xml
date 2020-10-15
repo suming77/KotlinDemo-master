@@ -35,6 +35,7 @@
         <activity android:name=".blog.GenericsActivity"/>
         <activity android:name=".blog.NestInnerActivity"/>
         <activity android:name=".blog.EnumActivity"/>
+        <activity android:name=".blog.ObjectActivity"/>
     </application>
 
 </manifest>

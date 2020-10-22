@@ -36,6 +36,7 @@
         <activity android:name=".blog.NestInnerActivity"/>
         <activity android:name=".blog.EnumActivity"/>
         <activity android:name=".blog.ObjectActivity"/>
+        <activity android:name=".blog.TypeAliasesActivity"/>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import com.suming.kotlindemo.blog.*
 import com.suming.kotlindemo.blog.DataTypeActivity
 import com.suming.kotlindemo.blog.EnumActivity
 import com.suming.kotlindemo.blog.ObjectActivity
+import java.lang.reflect.Type
 
 //kotlin的基础语法
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_nest_inner_class).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_enum).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_object).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_type_aliases).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -96,6 +98,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_object -> {//object
                 startActivity(Intent(this, ObjectActivity::class.java))
+            }
+            R.id.btn_type_aliases -> {//类型别名
+                startActivity(Intent(this, TypeAliasesActivity::class.java))
             }
 
         }

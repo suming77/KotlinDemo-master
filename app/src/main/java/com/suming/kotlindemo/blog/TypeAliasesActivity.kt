@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_type_aliases.btn_upgrade_button a
 import java.io.File
 
 import com.suming.kotlindemo.blog.User as DatabaseUser
-import android.support.v4.app.NotificationCompat.Builder as NotificationBuilder
+//import android.support.v4.app.NotificationCompat.Builder as NotificationBuilder
 
 typealias DatabaseUser2 = com.suming.kotlindemo.blog.User
 

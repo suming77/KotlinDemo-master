@@ -126,6 +126,17 @@
                 android:text="object"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_inline_classes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#2196F3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="内联类"
+                android:textAllCaps="false" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -235,6 +246,7 @@
                 android:paddingRight="10dp"
                 android:text="枚举"
                 android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn_type_aliases"
                 android:layout_width="match_parent"

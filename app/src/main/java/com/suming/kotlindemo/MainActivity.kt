@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_enum).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_object).setOnClickListener(this)
         findViewById<TextView>(R.id.btn_type_aliases).setOnClickListener(this)
+        findViewById<TextView>(R.id.btn_delegated).setOnClickListener(this)
 
         btn_inline_classes.setOnClickListener(this)
     }
@@ -107,6 +108,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_inline_classes -> {//内联类
                 startActivity(Intent(this, InlineClassesActivity::class.java))
+            }
+            R.id.btn_delegated -> {//委托属性
+                startActivity(Intent(this, DelegatedActivity::class.java))
             }
 
         }

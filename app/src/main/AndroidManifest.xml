@@ -39,6 +39,7 @@
         <activity android:name=".blog.TypeAliasesActivity"/>
         <activity android:name=".blog.InlineClassesActivity"/>
         <activity android:name=".blog.DelegatedActivity"/>
+        <activity android:name=".blog.LambdasActivity"/>
     </application>
 
 </manifest>

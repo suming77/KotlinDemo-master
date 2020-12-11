@@ -136,6 +136,16 @@
                 android:paddingRight="10dp"
                 android:text="内联类"
                 android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn_lambdas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#F44336"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="高阶函数和Lambdas"
+                android:textAllCaps="false" />
 
         </LinearLayout>
 

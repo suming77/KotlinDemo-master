@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_delegated).setOnClickListener(this)
         btn_inline_classes.setOnClickListener(this)
         btn_lambdas.setOnClickListener(this)
+        btn_reflection.setOnClickListener(this)
 
     }
 
@@ -114,6 +115,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_lambdas -> {//高阶函数和Lambdas
                 startActivity(Intent(this, LambdasActivity::class.java))
+            }
+            R.id.btn_reflection -> {//反射和引用
+                startActivity(Intent(this, ReflectionActivity::class.java))
             }
 
         }

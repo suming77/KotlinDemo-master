@@ -1,5 +1,8 @@
 package com.suming.kotlindemo.blog
 
+
+import android.app.AlertDialog
+import android.database.Observable
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioGroup
@@ -13,7 +16,9 @@ import androidx.appcompat.app.AppCompatActivity
  * Kotlin 函数是一级函数，这意味着它们可以存储在变量和数据结构中，作为参数传递给其他高阶函数，也可以从其他高阶函数返回。
  * 对于其他非函数值，你可以以任何可能的方式对函数进行操作。提供了一系列函数类型来表示函数和lambda表达式。
  */
-//typealias ClickHandler2 = (Button, ClickEvent) -> Unit
+typealias StringEmpty = (String) -> Unit
+
+fun saulte() = println("fun saulte")
 
 class LambdasActivity : AppCompatActivity() {
 
@@ -34,6 +39,22 @@ class LambdasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val textView = TextView(this)
+
+        /**
+         * 18.lambda 表达式的作用域中访问变量
+         * (1)在 Java 函数内部定义一个匿名内部类或者 lambda，内部类访问的局部变量必须是 `final` 修饰的，
+         * 意味着在内部类内部或者 lambda 表达式的内部无法修改函数局部变量的值。
+         *
+         * （2）Kotlin 中在函数定义的内部类或 lambda，既可以访问 `final` 修饰的变量，也可以访问非 `final` 修饰的变量，
+         * 意味着 lambda 内部是可以直接修改函数局部变量的值。
+         */
+        var count = 0//声明非final类型
+        val countFinal = 0//声明final类型
+        textView.setOnClickListener {
+            println(count++)//访问并修改非final修饰的变量
+            println(countFinal)//访问final修饰的变量，和Java一样
+        }
         stringMapper("Android", { input ->
             input.length
         })
@@ -41,7 +62,6 @@ class LambdasActivity : AppCompatActivity() {
         stringMapper("Android") { input ->
             input.length
         }
-
 
         val items = arrayOf(1, 2, 3, 4, 5)
         //Lambdas是大括号括起来的代码块
@@ -141,7 +161,6 @@ class LambdasActivity : AppCompatActivity() {
         val strs = arrayOf("sum", "java", "android", "kotlin")
         strs.filter { it.length == 5 }.sortedBy { it }.map { it.toUpperCase() }
 
-
         /**
          * 12.下划线用于未使用的变量（自1.1以来）
          */
@@ -159,7 +178,6 @@ class LambdasActivity : AppCompatActivity() {
             }
         }
 
-
         /**
          * 13.匿名函数
          * 并非每个函数都需要一个名称，某些函数通过输入和输出更直接地进行标识，这些函数称为匿名函数。
@@ -173,7 +191,6 @@ class LambdasActivity : AppCompatActivity() {
         }
         val stringLength: Int = stringLengthFunc("Android")
 
-
         fun test(x: Int, y: Int): Int = x + y
         fun(x: Int, y: Int): Int = x + y
         fun(x: Int, y: Int): Int {
@@ -183,7 +200,6 @@ class LambdasActivity : AppCompatActivity() {
         //返回符合条件的元素的列表
         val list = items.filter(fun(item) = item > 2)
         println("list == $list")
-
 
         /**
          * 14.闭包
@@ -203,7 +219,6 @@ class LambdasActivity : AppCompatActivity() {
         val all: Int.(Int) -> Int = { other -> plus(other) }
         val all2 = fun Int.(other: Int): Int = this + other
 
-
         study {//带有接收器的lambda从这里开始
             body()//调用接收器对象上的方法
         }
@@ -215,8 +230,100 @@ class LambdasActivity : AppCompatActivity() {
         expressionParameter(2, hasParameter)//打印为 6
 
         println("表达式格式：${hasParameter(4, 2)} | ${expressionParameter(2, hasParameter)}")
+
+        items.joinToString(separator = ",", prefix = "<", postfix = ">", transform = { "index$it" })
+
+        /**
+         * 16.使用typealias关键字给Lambda类型命名
+         */
+        val strEmpty: StringEmpty = {
+            if (it.isEmpty()) {
+                //TODO
+            }
+        }
+        val strTrue: StringEmpty = {
+            if (it.equals("true")) {
+                //TODO
+            }
+        }
+
+        /**
+         * 17.Lambda表达式常用场景
+         */
+        //场景一： lambda 表达式与集合一起使用是最常见的场景，可以各种帅选、映射、变换操作符和对集合数据进行各种操作，
+        //非常灵活，类似使用 RxJava 函数式编程，Kotlin 在语言层面无需增加额外库，就给你提供函数式编程API。
+        val lists = arrayListOf("Java", "Android", "Kotlin")
+        lists.filter {
+            it.startsWith("K")
+        }.map {
+            "$it 是一门非常好的语言！"
+        }.forEach {
+            println(it)
+        }
+
+        //场景二：替代原有匿名内部类，但是注意只能替代单抽象方法的类。
+        textView.setOnClickListener {
+            //TODO
+        }
+
+        //（1）最常见的使用方式是类名+双冒号+成员（属性或函数）：
+        val persons = arrayListOf(Person("Java", 20), Person("Android", 5))
+        println(persons.maxBy({ p: Person -> p.age }))
+        //使用成员引用的方式
+        println(persons.maxBy(Person::age))//成员的引用类型和maxBy()传入Lambda表达式的一致
+
+        //（2）省略类名，直接使用顶层函数：
+        run({ saulte() })
+        //使用成员引用简化后
+        run(::saulte)
+
+        //（3）如果 lambda 要委托给一个接收多个参数的函数，提供成员引用代替它将会非常方便：
+        //有多个参数的 lambda
+        val action = { person: Person, message: String -> sendEmail(person, message) }
+        //使用成员引用代替
+        val nextAction = ::sendEmail
+
+        //调用
+        nextAction(Person("name", 10), "msg")
+
+        //（4）成员引用用于构造方法
+        val getPerson = ::Person //创建的实例动作就保存成了值
+        println("构造方法 == " + getPerson)//打印 Person(name=Kotlin, age=3)
+
+        //（5）成员引用用于拓展函数
+        val isChild = Person::isChild
+        println("isChild == " + isChild(Person("Java", 20)))//打印 true
+
+        //18.绑定引用
+        val person = Person("Android", 24) //创建实例
+//        val personAge = { person.age } //Kotlin1.1之前显式写出 lambda
+        val personAge = person::age //Kotlin1.1之后可以使用绑定引用
+
+        println("person: age == ${personAge()}")//打印 person: age == 24
     }
 
+    private fun sendEmail(person: Person, message: String) {
+        //TODO
+    }
+
+
+    // 场景三：定义 Kotlin 扩展函数或者说需要把某个操作或者函数当作值传入某个函数的时候。
+    fun showDialog(
+            content: String = "弹框", negativeText: String = "取消", positiveText: String = "确定",
+            negativeAction: (() -> Unit)? = null, positiveAction: (() -> Unit)? = null
+    ) {
+        AlertDialog.Builder(this)
+                .setMessage(content)
+                .setNegativeButton(negativeText) { _, _ ->
+                    negativeAction?.invoke()
+                }
+                .setPositiveButton(positiveText) { _, _ ->
+                    positiveAction?.invoke()
+                }
+                .setCancelable(true)
+                .create()
+                .show()
+    }
 
     /**
      * 1.高阶函数
@@ -226,7 +333,6 @@ class LambdasActivity : AppCompatActivity() {
         // Invoke function
         return mapper(str)
     }
-
 
     /**
      * 2.函数式编程习语折叠
@@ -353,4 +459,12 @@ class LambdasActivity : AppCompatActivity() {
         student.init()//将接收器对象传递给lambda
         return student
     }
+
+    data class Person(val name: String, val age: Int) {
+
+//        constructor(name: String, age: Int, numA: Int) : this(name, age)
+    }
 }
+
+// 这是Person的一个扩展函数，判断是否成年
+fun LambdasActivity.Person.isChild() = age > 18

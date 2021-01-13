@@ -136,6 +136,7 @@
                 android:paddingRight="10dp"
                 android:text="内联类"
                 android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn_lambdas"
                 android:layout_width="match_parent"
@@ -277,6 +278,17 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="委托属性"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_reflection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#3F51B5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="反射和引用"
                 android:textAllCaps="false" />
         </LinearLayout>
     </LinearLayout>

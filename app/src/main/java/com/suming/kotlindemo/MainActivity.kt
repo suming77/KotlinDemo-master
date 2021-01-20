@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_inline_classes.setOnClickListener(this)
         btn_lambdas.setOnClickListener(this)
         btn_reflection.setOnClickListener(this)
-
+        btn_annotations.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -117,6 +117,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, LambdasActivity::class.java))
             }
             R.id.btn_reflection -> {//反射和引用
+                startActivity(Intent(this, ReflectionActivity::class.java))
+            }
+            R.id.btn_annotations -> {//注解
                 startActivity(Intent(this, ReflectionActivity::class.java))
             }
 

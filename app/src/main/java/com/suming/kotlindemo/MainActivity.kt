@@ -41,8 +41,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<TextView>(R.id.btn_delegated).setOnClickListener(this)
         btn_inline_classes.setOnClickListener(this)
         btn_lambdas.setOnClickListener(this)
-        btn_reflection.setOnClickListener(this)
+        btn_reference.setOnClickListener(this)
         btn_annotations.setOnClickListener(this)
+        btn_reflection.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -116,10 +117,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_lambdas -> {//高阶函数和Lambdas
                 startActivity(Intent(this, LambdasActivity::class.java))
             }
-            R.id.btn_reflection -> {//反射和引用
-                startActivity(Intent(this, ReflectionActivity::class.java))
+            R.id.btn_reference -> {//引用
+                startActivity(Intent(this, ReferenceActivity::class.java))
             }
             R.id.btn_annotations -> {//注解
+                startActivity(Intent(this, AnnotationsActivity::class.java))
+            }
+            R.id.btn_reflection -> {//反射
                 startActivity(Intent(this, ReflectionActivity::class.java))
             }
 

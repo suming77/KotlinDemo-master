@@ -24,8 +24,6 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class ExampleActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = "JAVA";
-    final String a = "";
-
 
     private static final String mark = "HelloWord";
     private static final String mark2 = String.valueOf("HelloWord");
@@ -60,6 +58,10 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
                 System.out.println(count);//在匿名OnClickListener内部类访问count必须要是final修饰的
             }
         });
+
+        Class<?> javaRef = ReflectionActivity.class;
+//        Class<?> javaName = Class.forName("包名.ReflectionActivity");
+
     }
 
     @Override
@@ -96,7 +98,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    @AnnNormal(age = 27,value = "")
+    @AnnNormal(age = 27, value = "")
     private void synForJava(String str) {
         if (!TextUtils.isEmpty(str)) {
             Log.e(TAG, "syn == result：" + str.toUpperCase());
@@ -200,23 +202,6 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
 
         String value();
     }
-
-    // Java
-    public @interface AnnValue {
-//        String value();
-    }
-
-    // Java
-    public @interface AnnArray {
-        String[] names();
-    }
-
-
-    // Java
-    public @interface AnnInt {
-        int age();
-    }
-
 
     public class Dragon<T> {//创建类的时候，通过<T>为其指定了类型参数T
 

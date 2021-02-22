@@ -40,8 +40,9 @@
         <activity android:name=".blog.InlineClassesActivity"/>
         <activity android:name=".blog.DelegatedActivity"/>
         <activity android:name=".blog.LambdasActivity"/>
-        <activity android:name=".blog.ReflectionActivity"/>
+        <activity android:name=".blog.ReferenceActivity"/>
         <activity android:name=".blog.AnnotationsActivity"/>
+        <activity android:name=".blog.ReflectionActivity"/>
     </application>
 
 </manifest>

@@ -23,7 +23,6 @@ const val TIMEOUT = 100L
 class AnnotationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         remove(0)
     }
 
@@ -110,7 +109,7 @@ class AnnotationsActivity : AppCompatActivity() {
     }
 
     fun suppressMethod(list: List<*>) {
-        //代码黄色警告Unchecked_cast：List<*> to List<String>
+        /* 代码黄色警告Unchecked_cast：List<*> to List<String> */
         val strings = list as List<String>
 
         //警告消失，被抑制
@@ -126,7 +125,7 @@ class AnnotationsActivity : AppCompatActivity() {
     @Target(AnnotationTarget.PROPERTY)
     annotation class Person
 
-    //元注解
+    /* 元注解 */
     @Target(AnnotationTarget.CLASS)
     annotation class AnnBinding
 
